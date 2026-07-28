@@ -49,3 +49,44 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+fibonacci_sequence = []
+
+def fibonacci() :
+    user_input = int(input("Enter a number" ))
+    numbers = [x for x in range(user_input)]
+    for i in numbers :
+        if numbers[i] < numbers[2] :
+            fibonacci_sequence.append(numbers[i])
+        if numbers[i] >= numbers[2] :
+            numbers[i] = numbers[i-1] + numbers[i-2]
+            fibonacci_sequence.append(numbers[i])
+
+    for i in fibonacci_sequence :
+        print(i,end=" ")
+
+print(fibonacci())
+
+def fibonacci_checker() :
+    user_input = int(input("Enter an nth fibonacci number(1 upwards)" ))
+    fibonacci_number = int(input("Enter a fibonacci number(0 upwards)" ))
+    numbers = [x for x in range(user_input)]
+          
+    for i in range(user_input) :
+        if numbers[i] < numbers[2] :
+            fibonacci_sequence.append(numbers[i])
+        if numbers[i] >= numbers[2] :
+            numbers[i] = numbers[i-1] + numbers[i-2]
+            fibonacci_sequence.append(numbers[i])
+    if fibonacci_number > user_input :
+        if fibonacci_number in fibonacci_sequence :
+            print(f"{fibonacci_number} is a fibonacci number")
+        else :
+            print(f"{fibonacci_number} is NOT a fibonacci number")
+
+    else :
+        print(f"{fibonacci_number} must be greater than user_input") 
+
+print(fibonacci_checker())
+
+
+
