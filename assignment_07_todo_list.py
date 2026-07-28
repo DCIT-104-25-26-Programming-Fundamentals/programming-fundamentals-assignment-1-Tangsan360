@@ -78,4 +78,49 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+import sys
+user_input = int(input("Enter an option(1-4): "))
+total_task = [ ]
+def add_task() :   
+    counter = 4
+    while counter > 0 :
+        task_description = input("Enter a task description")
+        total_task.append(task_description)
+        print("Task added successfully !")
+        counter -= 1
 
+def view_task() :
+    for position,task in enumerate(total_task,1) :
+        print(f"{position} : {task}")
+
+def delete_task() :
+    task_removal = int(input("What task do you want to remove?"))
+    index = task_removal -1
+    if 0<= total_task < len(total_task) :
+        total_task.pop(index)
+        print("Task deleted successfully!")
+
+def done() :
+    sys.exit()
+
+
+
+def todo_list() :
+
+    if user_input ==1 :
+        print(add_task())
+
+    elif user_input == 2 :
+        print(view_task())
+    
+    elif user_input == 3 :
+        print(delete_task())
+
+    elif user_input == 4 :
+        print(done())
+    
+    else :
+        print(f"{user_input} is out of option range")
+
+print(add_task())
+print(view_task())
