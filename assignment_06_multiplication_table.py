@@ -55,3 +55,23 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+multiples = [x for x in range(1,13)]
+ 
+def multiplication_table() :
+    number = int(input("Enter a number" ))
+    for multiple in multiples :
+        result = number * multiple
+        print(result)
+
+def complete_multiples() :
+    number = int(input("Enter a number"))
+    for i in range(1,number+1) :
+        for j in range(1,13):
+            result = i*j
+            if j == 12 :
+                print(result,end="\n----------------\n")
+            else :
+                print(result)
+
+
+print(complete_multiples())
