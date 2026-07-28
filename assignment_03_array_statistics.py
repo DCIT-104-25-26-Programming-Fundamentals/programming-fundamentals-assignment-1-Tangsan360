@@ -39,3 +39,36 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+array = [13,10,15,20]
+array.sort()
+
+
+def addition() :
+    sum_result = 0
+    for i in array :
+        if i ==0 or i<0 :
+            print("This is an error")
+            break
+        else :
+            sum_result += i
+    return sum_result
+
+def mean():
+    sum_result = 0
+    for i in array :
+        sum_result += i
+    average = sum_result/len(array)
+    return average
+
+def highest_number() :
+    for i in array :
+        maximum = array[len(array)-1]
+    return maximum
+
+def lowest_number() :
+    for i in array :
+        minimum = array[0]
+    return minimum   
+
+
+print(lowest_number()) 
