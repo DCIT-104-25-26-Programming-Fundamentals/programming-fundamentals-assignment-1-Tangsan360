@@ -89,4 +89,62 @@
 # =============================================================================
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
+import sys
+ 
+student_data = [ ]
+user_input = int(input("Enter your choice"))
 
+def identity_generator() :
+    student_name = input("Enter your name")
+    number_of_scores = int(input("How many scores?"))
+    student_scores =[ ]
+    for i in range(number_of_scores) :
+        score = int(input("Enter your score"))
+        student_scores.append(score)
+    student_id = input("Enter your id")
+    result = [("name",student_name),("scores",student_scores),("id",student_id)]
+    final = dict(result)
+    student_data.append(final)
+
+def formatted_table() :
+    print(f"{'id':<10} | {'name':<15} | {'scores'}") 
+    print("-"*40)
+    for student in student_data :
+        scores_str = ",".join(map(str,student["scores"]))
+        print(f"{student["id"]:<10} | {student["name"]:<15} | {scores_str}") 
+
+def mean_score() :
+    id_checker = input("Enter your id")
+
+    for student in student_data :
+        if id_checker in student["id"] :
+            print(f"student name is {student["name"]}")
+            total_score = sum(scores["score"])
+            average = total_score/len(scores[score])
+            print(average)
+        else :
+            print("id NOT found")
+
+def done():
+    sys.exit("Bye Bye")
+
+
+def student_records() :
+
+    if user_input ==1 :
+        print(identity_generator())
+
+    elif user_input == 2 :
+        print(formatted_table())
+    
+    elif user_input == 3 :
+        print(mean_score())
+
+    elif user_input == 4 :
+        print(done())
+    
+    else :
+        print(f"{user_input} is out of option range")
+
+print(identity_generator())
+print(formatted_table())
