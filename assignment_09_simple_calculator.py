@@ -68,3 +68,59 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+import sys
+options = ["Addtion","Subtraction","Multiplication","Division","Modulus","Exponent","Quit"]
+for position,option in enumerate(options) :
+    print(f"{position} : {option}")
+user_input = int(input("enter an arithmetic option"))
+def addtion(a,b):
+    print(a+b)
+
+def subtraction(a,b):
+    print9(a-b)
+
+def Multiplication(a,b):
+    print(a*b)
+
+def Division(a,b):
+    result = a/b
+    print(f"{result:.2f}")
+    try :
+        a/b
+    except ZeroDivisionError :
+        print("cannot divide by zero")
+
+def Modulus(a,b):
+    print(a%b)
+
+def Exponentiation(a,b):
+    print(a**b)
+
+def Quit():
+    sys.exit()
+
+
+def calculator() :
+    
+    while 1<=user_input<=7 :
+         
+        if user_input == 1 :
+            print(addtion())
+        elif user_input == 2 :
+            print(subtraction())
+        elif user_input == 3 :
+            print(Multiplication())
+        elif user_input == 4 :
+            print( Division())
+        elif user_input == 5 :
+            print(Modulus)
+        elif user_input == 6 :
+            print(Exponentiation())
+        elif user_input == 7 :
+            print(Quit())
+        else :
+            print("option is out of range")
+        user_input = int(input("enter an arithmetic option"))
+
+
+    print(calculator())
