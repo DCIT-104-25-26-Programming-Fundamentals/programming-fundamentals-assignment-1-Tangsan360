@@ -1,8 +1,7 @@
 # =============================================================================
 # PROGRAMMING FUNDAMENTALS — Assignment 2
 # Topic: Conditional Logic (if / elif / else) and Functions
-# =============================================================================
-#
+# ============================================================================
 # TASK: Student Grade System
 #
 # Write a Python program that reads a student's score and outputs the
@@ -45,3 +44,19 @@
 # YOUR CODE BELOW — remove the # symbols from the scaffold and fill it in
 # =============================================================================
 
+def garding_system():
+
+    score =  float(input("Enter student score (0-100): 67"))
+    if score < 0 or score > 0:
+        print("Out of score range")
+        return none
+    if score >= 80 :
+        print("Grade A")
+    elif score >= 70 :
+        print("Grade B")
+    elif score >= 60 :
+        print("Grade C")
+    elif score >= 50:
+        print("Grade D")
+    else :
+        print("Grade F")
